@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A basic calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+     <main>
+      
+    <div class="container">
+          <div id="icon" class="col-md-12" style="font-size: 2em">
+          <!-- Clock Icon -->
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-alarm float-left" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 15A6 6 0 1 0 8 3a6 6 0 0 0 0 12zm0 1A7 7 0 1 0 8 2a7 7 0 0 0 0 14z"></path>
+              <path fill-rule="evenodd" d="M8 4.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.053.224l-1.5 3a.5.5 0 1 1-.894-.448L7.5 8.882V5a.5.5 0 0 1 .5-.5z"></path>
+              <path d="M.86 5.387A2.5 2.5 0 1 1 4.387 1.86 8.035 8.035 0 0 0 .86 5.387zM11.613 1.86a2.5 2.5 0 1 1 3.527 3.527 8.035 8.035 0 0 0-3.527-3.527z"></path>
+              <path fill-rule="evenodd" d="M11.646 14.146a.5.5 0 0 1 .708 0l1 1a.5.5 0 0 1-.708.708l-1-1a.5.5 0 0 1 0-.708zm-7.292 0a.5.5 0 0 0-.708 0l-1 1a.5.5 0 0 0 .708.708l1-1a.5.5 0 0 0 0-.708zM5.5.5A.5.5 0 0 1 6 0h4a.5.5 0 0 1 0 1H6a.5.5 0 0 1-.5-.5z"></path>
+              <path d="M7 1h2v2H7V1z"></path>
+            </svg>
+          <!-- Calendar2 check -->
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-calendar2-check float-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+              <path fill-rule="evenodd" d="M14 2H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM2 1a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2z"/>
+              <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5zm9 0a.5.5 0 0 1 .5.5V1a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 .5-.5z"/>
+              <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+            </svg>
+          </div>
+      </div> 
+    </main>     
+
+    <div class="container">
+      <div row mb-4>
+        <div id="hour-9" class="row time-block">
+          <div class="col-md-1 hour"> 9:00am EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded" placeholder="Let's begin your day..."></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-10" class="row time-block">
+          <div class="col-md-1 hour"> 10:00am EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-11" class="row time-block">
+          <div class="col-md-1 hour"> 11:00am EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-12" class="row time-block">
+          <div class="col-md-1 hour"> 12:00pm EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-13" class="row time-block">
+          <div class="col-md-1 hour"> 1:00pm EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-14" class="row time-block">
+          <div class="col-md-1 hour"> 2:00pm EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-15" class="row time-block">
+          <div class="col-md-1 hour"> 3:00pm EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-16" class="row time-block">
+          <div class="col-md-1 hour"> 4:00pm EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+      <div row mb-4>
+        <div id="hour-17" class="row time-block">
+          <div class="col-md-1 hour"> 5:00pm EST</div>
+          <textarea class="col-md-10 description shadow-lg p-3 mb-1 bg-white rounded"></textarea>
+          <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    
+    <script src="script.js"></script>
+
+  </body>
+</html>
