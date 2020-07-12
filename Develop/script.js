@@ -1,7 +1,0 @@
-var 
-
-
-$(document).ready(function(){
-
-
-});
