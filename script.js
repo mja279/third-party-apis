@@ -5,28 +5,33 @@ colorSchedule();
 // The page will refresh every 15 seconds:
 var interval = setInterval(colorSchedule,15000);
 
+
+// When user clicks on the save icon, this records all entries associated to that div
 $(".saveBtn").on("click", function() {
-    // get text from corresponding div and save it to global var "value" 
-    var value = $(this).siblings(".description").val();
-    // get id attribute associated with the div containing the text and save it to global var "time" 
-    var time = $(this).parent().attr("id");
-    // save the text in "value" to localStorage using "time" as the key
-    localStorage.setItem(time, value)
+    
+    var plan = $(this).siblings(".description").val();
+    var hour = $(this).parent().attr("id");
+    localStorage.setItem(hour, plan)
 });
-// create a save all button, and a clear all button
+// Color-code the past, present, and future blocks 
 function colorSchedule(){
     var currentTimeBlock = moment().hours();
-    for( i = 9; i < ($(".time-block").length + 9) ; i++ ) {
-        var ths = $("#hour-"+i);
-        ths.removeClass("past")
-        ths.removeClass("present")
-        ths.removeClass("future")
+    var clock = $(".time-block")
+
+    for( i = 9; i < (clock.length + 9) ; i++ ) {
+        var schedule = $("#hour-"+i);
+        schedule.removeClass("past")
+        schedule.removeClass("present")
+        schedule.removeClass("future")
+
         if (currentTimeBlock == i) {
-            ths.addClass("present")
+            schedule.addClass("present")
+
         } else if (currentTimeBlock > i) {
-            ths.addClass("past")
+            schedule.addClass("past")
+
         } else {
-            ths.addClass("future")
+            schedule.addClass("future")
         }
     }
-}
+};
