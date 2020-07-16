@@ -26,7 +26,7 @@ $(".saveBtn").on("click", function() {
 $(".refresh-icon").on("click", function () {
     //refreshes the page
     location.reload(true); 
-    alert('Reloading Page. ');
+    alert('Reloading Page. Any unsaved items will be deleted.');
 });
 
 
