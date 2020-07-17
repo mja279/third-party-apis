@@ -1,18 +1,6 @@
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-        placement : 'top',
-        trigger : 'hover'
-    });
-});
-
-
 for( i=0; i < localStorage.length; i++ ) {
     $("#"+localStorage.key(i)+" .description").val(localStorage.getItem(localStorage.key(i)));
 }
-colorSchedule();
-// The page will refresh every 15 seconds:
-var interval = setInterval(colorSchedule,15000);
-
 
 // When user clicks on the save icon, this records all entries associated to that div
 $(".saveBtn").on("click", function() {
@@ -45,16 +33,16 @@ $(".check-icon").on("click", function()  {
 function colorSchedule(){
 
     var now = moment().format("dddd, MMMM Do, YYYY");
-    $('#currentDay').append(now);
+    $('#currentDay').text(now);
 
     var currentTimeBlock = moment().hours();
-    var clock = $(".time-block")
+    var clock = $(".time-block");
 
     for(i = 9; i < (clock.length + 9); i++ ) {
         var schedule = $("#hour-"+i);
-        schedule.removeClass("past")
-        schedule.removeClass("present")
-        schedule.removeClass("future")
+        schedule.removeClass("past");
+        schedule.removeClass("present");
+        schedule.removeClass("future");
 
         if (currentTimeBlock == i) {
             schedule.addClass("present")
@@ -67,3 +55,7 @@ function colorSchedule(){
         }
     }
 };
+
+colorSchedule();
+// The page will refresh every 15 seconds:
+var interval = setInterval(colorSchedule,15000);
