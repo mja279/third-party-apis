@@ -5,6 +5,7 @@ $(document).ready(function(){
     });
 });
 
+
 for( i=0; i < localStorage.length; i++ ) {
     $("#"+localStorage.key(i)+" .description").val(localStorage.getItem(localStorage.key(i)));
 }
@@ -42,6 +43,10 @@ $(".check-icon").on("click", function()  {
 
 // Color-code the past, present, and future blocks 
 function colorSchedule(){
+
+    var now = moment().format("dddd, MMMM Do, YYYY");
+    $('#currentDay').append(now);
+
     var currentTimeBlock = moment().hours();
     var clock = $(".time-block")
 
