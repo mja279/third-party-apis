@@ -3,7 +3,7 @@ Daily Planner Homework
 
 <img src="https://github.com/mja279/third-party-apis/blob/master/Assests/Workday%20Planner.gif">
 
-<img src="https://github.com/mja279/third-party-apis/blob/master/Assests/Workday%20Planner.gif">
+<img src="https://github.com/mja279/third-party-apis/blob/master/Assests/Date%20in%20Planner.png">
 
 Submission:
 
